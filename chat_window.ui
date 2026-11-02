@@ -1,0 +1,2172 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="minimumSize">
+   <size>
+    <width>980</width>
+    <height>680</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>鲸伴 · 有记忆的陪伴</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="rootLayout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>0</number>
+    </property>
+    <property name="topMargin">
+     <number>0</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <property name="bottomMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="sidebarFrame">
+      <property name="minimumSize">
+       <size>
+        <width>220</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>220</width>
+        <height>16777215</height>
+       </size>
+      </property>
+      <layout class="QVBoxLayout" name="sidebarLayout">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="leftMargin">
+        <number>16</number>
+       </property>
+       <property name="topMargin">
+        <number>20</number>
+       </property>
+       <property name="rightMargin">
+        <number>16</number>
+       </property>
+       <property name="bottomMargin">
+        <number>16</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="brandLayout">
+         <item>
+          <widget class="QLabel" name="brandMark">
+           <property name="text">
+            <string>✦</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="brandName">
+           <property name="text">
+            <string>鲸伴</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QLabel" name="navCaption">
+         <property name="text">
+          <string>功能</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="chatNavButton">
+         <property name="text">
+          <string>对话</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="memoryNavButton">
+         <property name="text">
+          <string>长期记忆</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="voiceNavButton">
+         <property name="text">
+          <string>语音合成</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="qqNavButton">
+         <property name="text">
+          <string>QQ 接入</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="historyNavButton">
+         <property name="text">
+          <string>历史记录</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="memorySchemeNavButton">
+         <property name="text"><string>记忆方案</string></property>
+         <property name="checkable"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="settingsNavButton">
+         <property name="text">
+          <string>设置</string>
+         </property>
+         <property name="checkable">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pluginNavButton">
+         <property name="text"><string>插件</string></property>
+         <property name="checkable"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="aboutNavButton">
+         <property name="text"><string>关于</string></property>
+         <property name="checkable"><bool>true</bool></property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="sideSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QFrame" name="memoryCard">
+         <property name="focusPolicy"><enum>Qt::StrongFocus</enum></property>
+         <property name="toolTip"><string>点击查看长期记忆</string></property>
+         <property name="accessibleName"><string>查看长期记忆</string></property>
+         <layout class="QVBoxLayout" name="memoryCardLayout">
+          <item>
+           <widget class="QLabel" name="memoryTitle">
+            <property name="text">
+             <string>记忆状态 ›</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="memoryCountLabel">
+            <property name="text">
+             <string>已确认 0 条</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="modelStatusLabel">
+         <property name="text">
+          <string>● DeepSeek · 尚未配置</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="profileLabel">
+         <property name="text">
+          <string>本地数据保存在此设备</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    <item>
+     <widget class="QWidget" name="mainPanel">
+      <layout class="QVBoxLayout" name="mainLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="headerFrame">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>74</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>74</height>
+          </size>
+         </property>
+         <layout class="QHBoxLayout" name="headerLayout">
+          <property name="leftMargin">
+           <number>28</number>
+          </property>
+          <property name="rightMargin">
+           <number>28</number>
+          </property>
+          <item>
+           <layout class="QVBoxLayout" name="titleLayout">
+            <item>
+             <widget class="QLabel" name="pageTitle">
+              <property name="text">
+               <string>对话</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="pageSubtitle">
+              <property name="text">
+               <string>与 AI 助手持续交流，消息保存在本机</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <spacer name="headerSpacer">
+            <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>40</width>
+              <height>20</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item>
+           <widget class="QPushButton" name="usageBalanceButton">
+            <property name="toolTip">
+             <string>查看本地 Token 用量并查询 DeepSeek 余额</string>
+            </property>
+            <property name="text">
+             <string>用量 0</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="assistantIdentityFrame">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <layout class="QHBoxLayout" name="assistantIdentityLayout">
+             <property name="spacing">
+              <number>8</number>
+             </property>
+             <property name="leftMargin">
+              <number>7</number>
+             </property>
+             <property name="topMargin">
+              <number>5</number>
+             </property>
+             <property name="rightMargin">
+              <number>12</number>
+             </property>
+             <property name="bottomMargin">
+              <number>5</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="headerAssistantAvatar">
+               <property name="minimumSize">
+                <size>
+                 <width>34</width>
+                 <height>34</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>34</width>
+                 <height>34</height>
+                </size>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignCenter</set>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="headerAssistantName">
+               <property name="text">
+                <string>AI 助手</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QStackedWidget" name="pageStack">
+         <property name="currentIndex">
+          <number>0</number>
+         </property>
+         <widget class="QWidget" name="chatPage">
+          <layout class="QVBoxLayout" name="chatPageLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QScrollArea" name="chatScroll">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+               <horstretch>0</horstretch>
+               <verstretch>1</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <property name="horizontalScrollBarPolicy">
+              <enum>Qt::ScrollBarAlwaysOff</enum>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <widget class="QWidget" name="chatMessages">
+              <property name="geometry">
+               <rect>
+                <x>0</x>
+                <y>0</y>
+                <width>760</width>
+                <height>520</height>
+               </rect>
+              </property>
+              <layout class="QVBoxLayout" name="messageLayout">
+               <property name="spacing">
+                <number>15</number>
+               </property>
+               <property name="leftMargin">
+                <number>34</number>
+               </property>
+               <property name="topMargin">
+                <number>26</number>
+               </property>
+               <property name="rightMargin">
+                <number>34</number>
+               </property>
+               <property name="bottomMargin">
+                <number>26</number>
+               </property>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+           <item>
+            <widget class="QWidget" name="composerWrap">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <layout class="QVBoxLayout" name="composerWrapLayout">
+              <property name="spacing">
+               <number>6</number>
+              </property>
+              <property name="leftMargin">
+               <number>34</number>
+              </property>
+              <property name="topMargin">
+               <number>10</number>
+              </property>
+              <property name="rightMargin">
+               <number>34</number>
+              </property>
+              <property name="bottomMargin">
+               <number>10</number>
+              </property>
+              <item>
+               <widget class="QFrame" name="composerFrame">
+                <layout class="QVBoxLayout" name="composerLayout">
+                 <property name="leftMargin">
+                  <number>14</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>10</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>12</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>9</number>
+                 </property>
+                 <item>
+                  <widget class="QPlainTextEdit" name="messageInput">
+                   <property name="sizePolicy">
+                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                    </sizepolicy>
+                   </property>
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>58</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>78</height>
+                    </size>
+                   </property>
+                   <property name="placeholderText">
+                    <string>输入消息（Ctrl + Enter 发送）</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="attachmentSummaryLabel">
+                   <property name="text">
+                    <string />
+                   </property>
+                   <property name="visible">
+                    <bool>false</bool>
+                   </property>
+                   <property name="wordWrap">
+                    <bool>true</bool>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="toolsLayout">
+                   <item>
+                    <widget class="QPushButton" name="attachButton">
+                     <property name="toolTip">
+                      <string>添加图片或文档</string>
+                     </property>
+                     <property name="text">
+                      <string>附件</string>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>32</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>32</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="stickerLibraryButton">
+                     <property name="toolTip">
+                      <string>管理 AI 可以发送的本地表情图片</string>
+                     </property>
+                     <property name="text">
+                      <string>表情</string>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>32</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>32</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="voiceEnabledCheckBox">
+                     <property name="toolTip">
+                      <string>开启后，AI 回复会在生成时合成并播放语音</string>
+                     </property>
+                     <property name="text">
+                      <string>语音回复</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>32</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>32</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="pauseSpeechButton">
+                     <property name="text"><string>暂停语音</string></property>
+                     <property name="enabled"><bool>false</bool></property>
+                     <property name="toolTip"><string>暂停播放并中断当前语音请求；继续时重新合成未完成的短句，该句可能部分重复。</string></property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QToolButton" name="agentMenuButton">
+                     <property name="text">
+                      <string>电脑操作</string>
+                     </property>
+                     <property name="toolTip">
+                      <string>启用后 AI 可提出 PowerShell 命令；每次须确认。仅限本机聊天，不向 QQ 开放。</string>
+                     </property>
+                     <property name="checkable">
+                      <bool>true</bool>
+                     </property>
+                     <property name="minimumSize">
+                      <size>
+                       <width>0</width>
+                       <height>32</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>16777215</width>
+                       <height>32</height>
+                      </size>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="clearAttachmentsButton">
+                     <property name="text">
+                      <string>清除</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item>
+                    <spacer name="toolsSpacer">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <widget class="QPushButton" name="sendButton">
+                     <property name="text">
+                      <string>发送</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QLabel" name="footerNote">
+                <property name="text">
+                 <string>API 密钥在「设置」页配置；QQ 自动回复默认关闭。</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="memoryPage">
+          <layout class="QVBoxLayout" name="memoryContentLayout">
+           <property name="spacing">
+            <number>14</number>
+           </property>
+           <property name="leftMargin">
+            <number>32</number>
+           </property>
+           <property name="topMargin">
+            <number>24</number>
+           </property>
+           <property name="rightMargin">
+            <number>32</number>
+           </property>
+           <property name="bottomMargin">
+            <number>24</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="memoryIntroLabel">
+             <property name="text">
+              <string>管理全部长期记忆。选中条目可查看与修改；手动修订后会独立保留。此处管理的是长期记忆，原始对话请到“历史记录”查看。</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QCheckBox" name="autoExtractMemoryCheckBox">
+             <property name="text"><string>随标准记忆整理自动提取长期记忆（本地对话）</string></property>
+             <property name="toolTip"><string>依赖“记忆方案”的自动整理，或手动点击整理历史。自动确认只决定结果是否立即用于回答。</string></property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="memoryToolbar">
+             <item>
+              <widget class="QPushButton" name="extractMemoryButton">
+               <property name="text">
+                <string>从本地对话提取记忆</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QCheckBox" name="autoApproveMemoryCheckBox">
+               <property name="text">
+                <string>自动确认新提取的记忆</string>
+               </property>
+               <property name="checked">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="memoryToolbarSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QLabel" name="memoryStatusLabel">
+               <property name="text">
+                <string>确认后才会用于回答</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="memorySearchLayout">
+             <item><widget class="QLineEdit" name="memorySearchEdit">
+              <property name="placeholderText"><string>搜索记忆内容</string></property>
+              <property name="clearButtonEnabled"><bool>true</bool></property>
+             </widget></item>
+             <item><widget class="QComboBox" name="memoryFilterCombo">
+              <item><property name="text"><string>全部状态</string></property></item>
+              <item><property name="text"><string>已确认</string></property></item>
+              <item><property name="text"><string>待确认</string></property></item>
+             </widget></item>
+             <item><widget class="QPushButton" name="refreshMemoryButton"><property name="text"><string>刷新</string></property></widget></item>
+             <item><widget class="QPushButton" name="newMemoryButton"><property name="text"><string>新建记忆</string></property></widget></item>
+             <item><widget class="QLabel" name="memoryTotalLabel"><property name="text"><string>全部 0 条</string></property></widget></item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QListWidget" name="memoryListWidget">
+             <property name="wordWrap"><bool>true</bool></property>
+             <property name="spacing"><number>5</number></property>
+             <property name="alternatingRowColors"><bool>true</bool></property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>210</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="memoryEditLabel">
+             <property name="text">
+              <string>新增或编辑记忆</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="memoryDetailsLabel">
+             <property name="text"><string>选择一条记忆查看详情，或新建记忆</string></property>
+             <property name="wordWrap"><bool>true</bool></property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="memoryEditor">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>86</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>220</height>
+              </size>
+             </property>
+             <property name="placeholderText">
+              <string>例如：我喜欢先看简单示例，再逐步增加功能。</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="memoryActions">
+             <item>
+              <widget class="QPushButton" name="addMemoryButton">
+               <property name="text">
+                <string>添加为已确认</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="updateMemoryButton">
+               <property name="text">
+                <string>保存修改</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="approveMemoryButton">
+               <property name="text">
+                <string>确认这条记忆</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="deleteMemoryButton">
+               <property name="text">
+                <string>删除</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="memoryActionSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="voicePage">
+          <layout class="QVBoxLayout" name="voicePageLayout">
+           <property name="spacing">
+            <number>12</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item>
+            <widget class="QScrollArea" name="voiceScroll">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <widget class="QWidget" name="voiceScrollContent">
+              <layout class="QVBoxLayout" name="voiceContentLayout">
+               <property name="spacing">
+                <number>12</number>
+               </property>
+               <property name="leftMargin">
+                <number>28</number>
+               </property>
+               <property name="rightMargin">
+                <number>28</number>
+               </property>
+               <property name="topMargin">
+                <number>20</number>
+               </property>
+               <property name="bottomMargin">
+                <number>20</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="voiceIntroLabel">
+                 <property name="text">
+                  <string>选择合成方式后，点击“保存语音设置”应用。聊天页的“语音回复”控制是否自动朗读。</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <layout class="QFormLayout" name="voiceForm">
+                 <property name="spacing">
+                  <number>12</number>
+                 </property>
+                 <property name="fieldGrowthPolicy">
+                  <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                 </property>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="voiceProviderLabel">
+                   <property name="text">
+                    <string>合成方式</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QComboBox" name="voiceProviderCombo" />
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="voiceOnlineGroup">
+                 <property name="title">
+                  <string>豆包在线语音</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="voiceOnlineGroupLayout">
+                  <property name="spacing">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <layout class="QFormLayout" name="voiceOnlineForm">
+                    <property name="spacing">
+                     <number>12</number>
+                    </property>
+                    <property name="fieldGrowthPolicy">
+                     <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="doubaoApiKeyLabel">
+                      <property name="text">
+                       <string>豆包 API Key</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLineEdit" name="doubaoApiKeyEdit">
+                      <property name="echoMode">
+                       <enum>QLineEdit::Password</enum>
+                      </property>
+                      <property name="placeholderText">
+                       <string>从火山引擎控制台获取</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="doubaoSpeakerLabel">
+                      <property name="text">
+                       <string>音色 ID</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QLineEdit" name="doubaoSpeakerEdit">
+                      <property name="text">
+                       <string>zh_female_vv_uranus_bigtts</string>
+                      </property>
+                      <property name="toolTip">
+                       <string>从豆包音色库复制音色 ID，需与高级设置中的模型匹配。</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="doubaoSpeechRateLabel">
+                      <property name="text">
+                       <string>语速</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QSpinBox" name="doubaoSpeechRateSpin">
+                      <property name="minimum">
+                       <number>-50</number>
+                      </property>
+                      <property name="maximum">
+                       <number>100</number>
+                      </property>
+                      <property name="value">
+                       <number>0</number>
+                      </property>
+                      <property name="toolTip">
+                       <string>-50 为半速，100 为 2 倍速</string>
+                      </property>
+                      <property name="suffix">
+                       <string> %</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="doubaoHelpLabel">
+                    <property name="text">
+                     <string>首次使用需在火山引擎控制台开通“语音合成 2.0”。填写密钥并不等于服务已开通；试听会向豆包发送一句示例文字，并按平台规则计费。语速 0% 为正常速度。</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="voiceLocalGroup">
+                 <property name="title">
+                  <string>本地 Qwen 语音</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="voiceLocalGroupLayout">
+                  <property name="spacing">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <widget class="QLabel" name="localTtsInfoLabel">
+                    <property name="text">
+                     <string />
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="localTtsActions">
+                    <property name="spacing">
+                     <number>12</number>
+                    </property>
+                    <item>
+                     <widget class="QPushButton" name="prepareLocalTtsButton">
+                      <property name="text">
+                       <string>安装本地语音</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="cancelLocalTtsButton">
+                      <property name="text">
+                       <string>取消安装</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="startLocalTtsButton">
+                      <property name="text">
+                       <string>启动本地服务</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="removeLocalTtsButton">
+                      <property name="text">
+                       <string>删除本地环境</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QProgressBar" name="localTtsProgressBar">
+                    <property name="minimum">
+                     <number>0</number>
+                    </property>
+                    <property name="maximum">
+                     <number>0</number>
+                    </property>
+                    <property name="textVisible">
+                     <bool>false</bool>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QPlainTextEdit" name="localTtsLogEdit">
+                    <property name="readOnly">
+                     <bool>true</bool>
+                    </property>
+                    <property name="minimumSize">
+                     <size>
+                      <width>0</width>
+                      <height>70</height>
+                     </size>
+                    </property>
+                    <property name="maximumSize">
+                     <size>
+                      <width>16777215</width>
+                      <height>120</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <layout class="QFormLayout" name="voiceLocalForm">
+                    <property name="spacing">
+                     <number>12</number>
+                    </property>
+                    <property name="fieldGrowthPolicy">
+                     <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="voiceReferenceAudioLabel">
+                      <property name="text">
+                       <string>参考音频</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <layout class="QHBoxLayout" name="voiceReferenceAudioLayout">
+                      <item>
+                       <widget class="QLineEdit" name="voiceReferenceAudioEdit">
+                        <property name="placeholderText">
+                         <string>选择一段你希望模仿的语音</string>
+                        </property>
+                       </widget>
+                      </item>
+                      <item>
+                       <widget class="QPushButton" name="voiceBrowseButton">
+                        <property name="text">
+                         <string>选择文件</string>
+                        </property>
+                       </widget>
+                      </item>
+                     </layout>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="voiceReferenceTextLabel">
+                      <property name="text">
+                       <string>音频对应文字</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QPlainTextEdit" name="voiceReferenceTextEdit">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>64</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>16777215</width>
+                        <height>86</height>
+                       </size>
+                      </property>
+                      <property name="placeholderText">
+                       <string>准确写下参考音频里说的内容</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="localReferenceHelpLabel">
+                    <property name="text">
+                     <string>参考音频和对应文字用于模仿音色。安装环境时可以先留空，首次合成前再填写。</string>
+                    </property>
+                    <property name="wordWrap">
+                     <bool>true</bool>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="voiceAdvancedButton">
+                 <property name="text">
+                  <string>高级参数</string>
+                 </property>
+                 <property name="checkable">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="voiceOnlineAdvancedGroup">
+                 <property name="title">
+                  <string>在线高级参数</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="voiceOnlineAdvancedGroupLayout">
+                  <property name="spacing">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <layout class="QFormLayout" name="voiceOnlineAdvancedForm">
+                    <property name="spacing">
+                     <number>12</number>
+                    </property>
+                    <property name="fieldGrowthPolicy">
+                     <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="doubaoResourceLabel">
+                      <property name="text">
+                       <string>模型资源 ID</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLineEdit" name="doubaoResourceEdit">
+                      <property name="text">
+                       <string>seed-tts-2.0</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="doubaoUidLabel">
+                      <property name="text">
+                       <string>用户标识</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QLineEdit" name="doubaoUidEdit">
+                      <property name="text">
+                       <string>ai-chat-memory</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="voiceLocalAdvancedGroup">
+                 <property name="title">
+                  <string>本地高级参数</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="voiceLocalAdvancedGroupLayout">
+                  <property name="spacing">
+                   <number>12</number>
+                  </property>
+                  <item>
+                   <layout class="QFormLayout" name="voiceLocalAdvancedForm">
+                    <property name="spacing">
+                     <number>12</number>
+                    </property>
+                    <property name="fieldGrowthPolicy">
+                     <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                    </property>
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="voiceEndpointLabel">
+                      <property name="text">
+                       <string>本地服务地址</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLineEdit" name="voiceEndpointEdit">
+                      <property name="text">
+                       <string>http://127.0.0.1:9881</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="voiceModelLabel">
+                      <property name="text">
+                       <string>Qwen3 模型</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QLineEdit" name="voiceModelEdit">
+                      <property name="text">
+                       <string>Qwen/Qwen3-TTS-12Hz-0.6B-Base</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <widget class="QWidget" name="voiceLocalOptionsWidget">
+                    <layout class="QGridLayout" name="voiceOptionsGrid">
+                     <property name="horizontalSpacing">
+                      <number>12</number>
+                     </property>
+                     <property name="verticalSpacing">
+                      <number>8</number>
+                     </property>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="voiceLanguageLabel">
+                       <property name="text">
+                        <string>语音语言</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QComboBox" name="voiceLanguageCombo">
+                       <item>
+                        <property name="text">
+                         <string>Auto</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Chinese</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>English</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Japanese</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Korean</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>French</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>German</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Spanish</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Italian</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Portuguese</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>Russian</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="0" column="2">
+                      <widget class="QLabel" name="voiceDeviceLabel">
+                       <property name="text">
+                        <string>推理设备</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="3">
+                      <widget class="QComboBox" name="voiceDeviceCombo">
+                       <item>
+                        <property name="text">
+                         <string>auto</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>cuda:0</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>cpu</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="voiceDtypeLabel">
+                       <property name="text">
+                        <string>计算精度</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QComboBox" name="voiceDtypeCombo">
+                       <item>
+                        <property name="text">
+                         <string>auto</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>float16</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>bfloat16</string>
+                        </property>
+                       </item>
+                       <item>
+                        <property name="text">
+                         <string>float32</string>
+                        </property>
+                       </item>
+                      </widget>
+                     </item>
+                     <item row="1" column="2">
+                      <widget class="QLabel" name="voiceSegmentCharsLabel">
+                       <property name="text">
+                        <string>每段字数</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="3">
+                      <widget class="QSpinBox" name="voiceSegmentCharsSpin">
+                       <property name="minimum">
+                        <number>20</number>
+                       </property>
+                       <property name="maximum">
+                        <number>500</number>
+                       </property>
+                       <property name="value">
+                        <number>96</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="voiceTemperatureLabel">
+                       <property name="text">
+                        <string>随机度</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QDoubleSpinBox" name="voiceTemperatureSpin">
+                       <property name="decimals">
+                        <number>2</number>
+                       </property>
+                       <property name="minimum">
+                        <double>0.00</double>
+                       </property>
+                       <property name="maximum">
+                        <double>2.00</double>
+                       </property>
+                       <property name="singleStep">
+                        <double>0.05</double>
+                       </property>
+                       <property name="value">
+                        <double>0.70</double>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="2">
+                      <widget class="QLabel" name="voiceTopPLabel">
+                       <property name="text">
+                        <string>Top P</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="3">
+                      <widget class="QDoubleSpinBox" name="voiceTopPSpin">
+                       <property name="decimals">
+                        <number>2</number>
+                       </property>
+                       <property name="minimum">
+                        <double>0.01</double>
+                       </property>
+                       <property name="maximum">
+                        <double>1.00</double>
+                       </property>
+                       <property name="singleStep">
+                        <double>0.05</double>
+                       </property>
+                       <property name="value">
+                        <double>0.80</double>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="voiceTopKLabel">
+                       <property name="text">
+                        <string>Top K</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QSpinBox" name="voiceTopKSpin">
+                       <property name="minimum">
+                        <number>1</number>
+                       </property>
+                       <property name="maximum">
+                        <number>100</number>
+                       </property>
+                       <property name="value">
+                        <number>20</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="2">
+                      <widget class="QLabel" name="voiceRepetitionPenaltyLabel">
+                       <property name="text">
+                        <string>重复惩罚</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="3">
+                      <widget class="QDoubleSpinBox" name="voiceRepetitionPenaltySpin">
+                       <property name="decimals">
+                        <number>2</number>
+                       </property>
+                       <property name="minimum">
+                        <double>0.50</double>
+                       </property>
+                       <property name="maximum">
+                        <double>2.00</double>
+                       </property>
+                       <property name="singleStep">
+                        <double>0.05</double>
+                       </property>
+                       <property name="value">
+                        <double>1.05</double>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="voiceMaxTokensLabel">
+                       <property name="text">
+                        <string>最大生成长度</string>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QSpinBox" name="voiceMaxTokensSpin">
+                       <property name="minimum">
+                        <number>64</number>
+                       </property>
+                       <property name="maximum">
+                        <number>4096</number>
+                       </property>
+                       <property name="singleStep">
+                        <number>128</number>
+                       </property>
+                       <property name="value">
+                        <number>512</number>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="voiceActions">
+                 <property name="spacing">
+                  <number>12</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="saveVoiceButton">
+                   <property name="text">
+                    <string>保存语音设置</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="testVoiceButton">
+                   <property name="text">
+                    <string>语音试听</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="pauseVoicePageButton">
+                   <property name="text"><string>暂停语音</string></property>
+                   <property name="enabled"><bool>false</bool></property>
+                   <property name="toolTip"><string>暂停播放和语音请求，继续时重新请求未完成的短句。</string></property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QLabel" name="voiceStatusLabel">
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                 <property name="text">
+                  <string />
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="voiceBottomSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>20</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="qqPage">
+          <layout class="QVBoxLayout" name="qqOuterLayout">
+           <item>
+            <widget class="QScrollArea" name="qqScroll">
+             <property name="widgetResizable">
+              <bool>true</bool>
+             </property>
+             <property name="frameShape">
+              <enum>QFrame::NoFrame</enum>
+             </property>
+             <widget class="QWidget" name="qqScrollContent">
+              <layout class="QVBoxLayout" name="qqContentLayout">
+               <property name="spacing">
+                <number>13</number>
+               </property>
+               <property name="leftMargin">
+                <number>34</number>
+               </property>
+               <property name="topMargin">
+                <number>26</number>
+               </property>
+               <property name="rightMargin">
+                <number>34</number>
+               </property>
+               <property name="bottomMargin">
+                <number>26</number>
+               </property>
+               <item>
+                <widget class="QLabel" name="qqIntroLabel">
+                 <property name="text">
+                  <string>内置 NapCat / OneBot 11。可在本页启动服务、扫码登录和查看日志，也可连接已运行的外部桥接。</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QWidget" name="onebotContainer">
+                 <layout class="QVBoxLayout" name="onebotLayout">
+                  <property name="leftMargin"><number>0</number></property>
+                  <property name="topMargin"><number>0</number></property>
+                  <property name="rightMargin"><number>0</number></property>
+                  <property name="bottomMargin"><number>0</number></property>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="qqConnectionCard">
+                 <property name="title">
+                   <string>连接、访问与自动回复白名单</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="qqConnectionCardLayout">
+                  <item>
+                   <layout class="QFormLayout" name="qqForm">
+                    <item row="0" column="0">
+                     <widget class="QLabel" name="qqUrlLabel">
+                      <property name="text">
+                       <string>WebSocket 地址</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="0" column="1">
+                     <widget class="QLineEdit" name="qqUrlEdit">
+                      <property name="text">
+                       <string>ws://127.0.0.1:3001</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="0">
+                     <widget class="QLabel" name="qqTokenLabel">
+                      <property name="text">
+                       <string>访问令牌（可留空）</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="1" column="1">
+                     <widget class="QLineEdit" name="qqTokenEdit">
+                      <property name="echoMode">
+                       <enum>QLineEdit::Password</enum>
+                      </property>
+                      <property name="placeholderText">
+                       <string>如桥接程序设置了令牌</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="0">
+                     <widget class="QLabel" name="qqAllowlistLabel">
+                      <property name="text">
+                       <string>自动回复白名单</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item row="2" column="1">
+                     <widget class="QLineEdit" name="qqAllowlistEdit">
+                      <property name="placeholderText">
+                       <string>QQ 号用逗号分隔；留空时不会自动回复</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="qqReplyCard">
+                 <property name="title">
+                  <string>自动回复</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="qqReplyCardLayout">
+                  <item>
+                   <widget class="QCheckBox" name="qqAutoReplyCheckBox">
+                    <property name="text">
+                     <string>收到白名单内的 QQ 私聊后自动回复（默认关闭）</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="qqStickerCheckBox">
+                    <property name="text">
+                     <string>允许 AI 自主发送表情包</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QCheckBox" name="qqVoiceCheckBox">
+                    <property name="text">
+                     <string>允许 AI 自主发送语音（可在 QQ 中要求语音回复）</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="qqManualCard">
+                 <property name="title">
+                  <string>手动发送</string>
+                 </property>
+                 <layout class="QVBoxLayout" name="qqManualCardLayout">
+                  <item>
+                   <layout class="QHBoxLayout" name="qqManualLayout">
+                    <item>
+                     <widget class="QLineEdit" name="qqRecipientEdit">
+                      <property name="placeholderText">
+                       <string>接收方 QQ 号</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="qqSendImageButton">
+                      <property name="text">
+                       <string>发送表情 / 图片</string>
+                      </property>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QPushButton" name="qqSendVoiceButton">
+                      <property name="text">
+                       <string>发送语音文件</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <layout class="QHBoxLayout" name="qqActions">
+                 <item>
+                  <widget class="QPushButton" name="saveQqButton">
+                   <property name="text">
+                    <string>保存 QQ 设置</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="qqConnectButton">
+                   <property name="text">
+                    <string>连接本地桥接</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QLabel" name="qqStatusLabel">
+                   <property name="text">
+                    <string>尚未连接</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <spacer name="qqActionsSpacer">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                </layout>
+               </item>
+               <item>
+                <widget class="QLabel" name="qqSafetyNote">
+                 <property name="text">
+                  <string>当前仅接收私聊事件，不处理群消息。开启自动回复前，请先填写允许回复的 QQ 号。</string>
+                 </property>
+                 <property name="wordWrap">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <spacer name="qqBottomSpacer">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
+             </widget>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="settingsPage">
+          <layout class="QVBoxLayout" name="settingsContentLayout">
+           <property name="spacing">
+            <number>13</number>
+           </property>
+           <property name="leftMargin">
+            <number>34</number>
+           </property>
+           <property name="topMargin">
+            <number>26</number>
+           </property>
+           <property name="rightMargin">
+            <number>34</number>
+           </property>
+           <property name="bottomMargin">
+            <number>26</number>
+           </property>
+           <item>
+            <widget class="QLabel" name="settingsIntroLabel">
+             <property name="text">
+              <string>管理 AI 助手形象、模型连接和本机生成的语音文件。</string>
+             </property>
+             <property name="wordWrap">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="assistantDisplaySection">
+             <property name="text">
+              <string>助手形象</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QFormLayout" name="assistantDisplayForm">
+             <item row="0" column="0">
+              <widget class="QLabel" name="assistantNameLabel">
+               <property name="text">
+                <string>AI 名称</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="assistantNameEdit">
+               <property name="placeholderText">
+                <string>AI 助手</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="assistantAvatarLabel">
+               <property name="text">
+                <string>AI 头像</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <layout class="QHBoxLayout" name="assistantAvatarLayout">
+               <item>
+                <widget class="QLabel" name="assistantAvatarPreview">
+                 <property name="minimumSize">
+                  <size>
+                   <width>44</width>
+                   <height>44</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>44</width>
+                   <height>44</height>
+                  </size>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLineEdit" name="assistantAvatarEdit">
+                 <property name="placeholderText">
+                  <string>默认头像：assets/assistant_avatar.svg</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="assistantAvatarBrowseButton">
+                 <property name="text">
+                  <string>选择</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="assistantAvatarResetButton">
+                 <property name="text">
+                  <string>恢复默认</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QFormLayout" name="settingsForm">
+             <item row="0" column="0">
+              <widget class="QLabel" name="apiBaseUrlLabel">
+               <property name="text">
+                <string>API 地址</string>
+               </property>
+              </widget>
+             </item>
+             <item row="0" column="1">
+              <widget class="QLineEdit" name="apiBaseUrlEdit">
+               <property name="text">
+                <string>https://api.deepseek.com</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="0">
+              <widget class="QLabel" name="apiKeyLabel">
+               <property name="text">
+                <string>API 密钥</string>
+               </property>
+              </widget>
+             </item>
+             <item row="1" column="1">
+              <widget class="QLineEdit" name="apiKeyEdit">
+               <property name="echoMode">
+                <enum>QLineEdit::Password</enum>
+               </property>
+               <property name="placeholderText">
+                <string>粘贴你的 DeepSeek API 密钥</string>
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="0">
+              <widget class="QLabel" name="showApiKeySpacerLabel">
+               <property name="text">
+                <string />
+               </property>
+              </widget>
+             </item>
+             <item row="2" column="1">
+              <widget class="QCheckBox" name="showApiKeyCheckBox">
+               <property name="text">
+                <string>显示密钥</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="0">
+              <widget class="QLabel" name="modelLabel">
+               <property name="text">
+                <string>模型名称</string>
+               </property>
+              </widget>
+             </item>
+             <item row="3" column="1">
+              <widget class="QLineEdit" name="modelEdit">
+               <property name="text">
+                <string>deepseek-flash</string>
+               </property>
+              </widget>
+             </item>
+             <item row="4" column="1">
+              <widget class="QCheckBox" name="thinkingEnabledCheckBox">
+               <property name="text">
+                <string>深度思考（回答开始前会等待更久）</string>
+               </property>
+               <property name="toolTip">
+                <string>关闭时直接生成回答；开启后，在聊天气泡中实时展示模型返回的思考内容，可展开或收起，历史消息也可查看。</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QLabel" name="systemPromptLabel">
+             <property name="text">
+              <string>系统提示词</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPlainTextEdit" name="systemPromptEdit">
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>112</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>150</height>
+              </size>
+             </property>
+             <property name="plainText">
+              <string>你是一个真诚、清晰、耐心的 AI 助手。结合长期记忆回答，但不要把记忆当作不可更改的事实。</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="settingsActions">
+             <item>
+              <widget class="QPushButton" name="saveSettingsButton">
+               <property name="text">
+                <string>保存设置</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="settingsStatusLabel">
+               <property name="text">
+                <string>修改后记得保存</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="settingsActionsSpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="voiceHistoryLayout">
+             <item>
+              <widget class="QLabel" name="voiceHistoryLabel">
+               <property name="text">
+                <string>本机生成的回复语音</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <spacer name="voiceHistorySpacer">
+               <property name="orientation">
+                <enum>Qt::Horizontal</enum>
+               </property>
+               <property name="sizeHint" stdset="0">
+                <size>
+                 <width>40</width>
+                 <height>20</height>
+                </size>
+               </property>
+              </spacer>
+             </item>
+             <item>
+              <widget class="QPushButton" name="clearVoiceHistoryButton">
+               <property name="text">
+                <string>清理历史语音</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="dataMigrationButton">
+             <property name="text">
+              <string>数据迁移 · 备份 / 导入 DSH 聊天</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="clearAllDataButton">
+             <property name="text">
+              <string>清空全部聊天与记忆…</string>
+             </property>
+             <property name="styleSheet">
+              <string>color: #b14d50;</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="clearAllDataHelp">
+             <property name="text">
+              <string>重新开始对话：清除聊天、记忆及相关缓存，保留接口配置、角色和模型。操作前需要确认。</string>
+             </property>
+             <property name="wordWrap"><bool>true</bool></property>
+            </widget>
+           </item>
+           <item>
+            <spacer name="settingsBottomSpacer">
+             <property name="orientation">
+              <enum>Qt::Vertical</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>20</width>
+               <height>40</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="historyPage">
+          <layout class="QVBoxLayout" name="historyPageLayout" />
+         </widget>
+         <widget class="QWidget" name="memorySchemeContainer">
+          <layout class="QVBoxLayout" name="memorySchemeLayout" />
+         </widget>
+         <widget class="QWidget" name="aboutContainer">
+          <layout class="QVBoxLayout" name="aboutPageLayout">
+           <property name="leftMargin"><number>0</number></property>
+           <property name="topMargin"><number>0</number></property>
+           <property name="rightMargin"><number>0</number></property>
+           <property name="bottomMargin"><number>0</number></property>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pluginContainer">
+          <layout class="QVBoxLayout" name="pluginPageLayout">
+           <property name="leftMargin"><number>20</number></property>
+           <property name="topMargin"><number>16</number></property>
+           <property name="rightMargin"><number>20</number></property>
+           <property name="bottomMargin"><number>16</number></property>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources />
+ <connections />
+</ui>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>HistoryDialog</class>
+ <widget class="QDialog" name="HistoryDialog">
+  <property name="windowTitle"><string>历史记录管理</string></property>
+  <property name="minimumSize"><size><width>760</width><height>520</height></size></property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item><widget class="QLabel" name="descriptionLabel">
+    <property name="text"><string>管理数据库中的历史对话。“永久删除”会移除原消息及关联文件，AI 不能再检索它；“隐藏”仅收起显示，可随时恢复。长期记忆独立管理，不随此处删除。</string></property>
+    <property name="wordWrap"><bool>true</bool></property>
+   </widget></item>
+   <item><layout class="QHBoxLayout" name="searchLayout">
+    <item><widget class="QLineEdit" name="keywordEdit"><property name="placeholderText"><string>搜索消息文字或附件名称</string></property></widget></item>
+    <item><widget class="QComboBox" name="stateCombo"/></item>
+    <item><widget class="QPushButton" name="searchButton"><property name="text"><string>筛选</string></property></widget></item>
+   </layout></item>
+   <item><layout class="QHBoxLayout" name="dateLayout">
+    <item><widget class="QCheckBox" name="dateCheck"><property name="text"><string>按日期筛选</string></property></widget></item>
+    <item><widget class="QDateEdit" name="startDate"><property name="calendarPopup"><bool>true</bool></property><property name="displayFormat"><string>yyyy-MM-dd</string></property></widget></item>
+    <item><widget class="QLabel" name="toLabel"><property name="text"><string>至</string></property></widget></item>
+    <item><widget class="QDateEdit" name="endDate"><property name="calendarPopup"><bool>true</bool></property><property name="displayFormat"><string>yyyy-MM-dd</string></property></widget></item>
+    <item><widget class="QPushButton" name="resetButton"><property name="text"><string>重置</string></property></widget></item>
+   </layout></item>
+   <item><widget class="QTableWidget" name="historyTable"/></item>
+   <item><widget class="QLabel" name="selectionLabel"><property name="text"><string>点击左侧方框多选，双击内容查看原消息。</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+   <item><layout class="QHBoxLayout" name="pageLayout">
+    <item><widget class="QPushButton" name="previousButton"><property name="text"><string>上一页</string></property></widget></item>
+    <item><widget class="QLabel" name="pageLabel"/></item>
+    <item><widget class="QPushButton" name="nextButton"><property name="text"><string>下一页</string></property></widget></item>
+    <item><widget class="QPushButton" name="selectPageButton"><property name="text"><string>全选本页</string></property></widget></item>
+    <item><widget class="QPushButton" name="clearSelectionButton"><property name="text"><string>取消勾选</string></property></widget></item>
+   </layout></item>
+   <item><layout class="QHBoxLayout" name="actionLayout">
+    <item><widget class="QPushButton" name="hideSelectedButton"><property name="text"><string>仅隐藏所选</string></property></widget></item>
+    <item><widget class="QPushButton" name="restoreSelectedButton"><property name="text"><string>恢复所选</string></property></widget></item>
+    <item><widget class="QPushButton" name="hideFilteredButton"><property name="text"><string>仅隐藏筛选结果</string></property></widget></item>
+    <item><widget class="QPushButton" name="restoreFilteredButton"><property name="text"><string>恢复筛选结果</string></property></widget></item>
+    <item><widget class="QPushButton" name="closeButton"><property name="text"><string>完成</string></property></widget></item>
+   </layout></item>
+   <item><layout class="QHBoxLayout" name="deleteLayout">
+    <item><widget class="QPushButton" name="deleteSelectedButton">
+     <property name="text"><string>永久删除所选</string></property>
+     <property name="styleSheet"><string>color: #ae3939;</string></property>
+    </widget></item>
+    <item><widget class="QPushButton" name="deleteFilteredButton">
+     <property name="text"><string>永久删除全部筛选结果</string></property>
+     <property name="styleSheet"><string>color: #ae3939;</string></property>
+    </widget></item>
+   </layout></item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

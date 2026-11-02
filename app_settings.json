@@ -1,0 +1,46 @@
+{
+  "window": {
+    "title": "鲸伴 · 有记忆的陪伴",
+    "icon": "assets/jingban-icon.ico",
+    "width": 1240,
+    "height": 820,
+    "min_width": 980,
+    "min_height": 680
+  },
+  "dialogs": {
+    "image": "assets/mascot_v2.png"
+  },
+  "brand": {
+    "name": "鲸伴",
+    "mark": "✦"
+  },
+  "assistant": {
+    "name": "大肥鱼",
+    "avatar": "assets/assistant_avatar.svg",
+    "initials": "大肥"
+  },
+  "user": {
+    "name": "你"
+  },
+  "memory": {
+    "auto_approve": true,
+    "auto_extract": true
+  },
+  "appearance": {
+    "font_family": "Microsoft YaHei UI",
+    "font_size": 13,
+    "background": "#F7F8FC",
+    "sidebar": "#EEF1F7",
+    "surface": "#FFFFFF",
+    "accent": "#4F6FDB",
+    "accent_hover": "#405FC5",
+    "accent_soft": "#E8EDFF",
+    "text": "#273246",
+    "muted": "#778196",
+    "border": "#E3E8F0",
+    "assistant_bubble": "#FFFFFF",
+    "user_bubble": "#EAF0FF",
+    "avatar_size": 38,
+    "bubble_max_width": 740
+  }
+}

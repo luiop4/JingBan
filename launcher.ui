@@ -1,0 +1,184 @@
+<?xml version='1.0' encoding='utf-8'?>
+<ui version="4.0">
+ <class>LauncherWindow</class>
+ <widget class="QMainWindow" name="LauncherWindow">
+  <property name="windowTitle">
+   <string>鲸伴 · 正在启动</string>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>720</width>
+    <height>440</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="outerLayout">
+    <property name="leftMargin">
+     <number>14</number>
+    </property>
+    <property name="topMargin">
+     <number>14</number>
+    </property>
+    <property name="rightMargin">
+     <number>14</number>
+    </property>
+    <property name="bottomMargin">
+     <number>14</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="panel">
+      <layout class="QHBoxLayout" name="panelLayout">
+       <property name="spacing">
+        <number>26</number>
+       </property>
+       <item>
+        <layout class="QVBoxLayout" name="graphicLayout">
+         <item>
+          <widget class="QLabel" name="characterLabel">
+           <property name="text">
+            <string />
+           </property>
+           <property name="minimumSize">
+            <size>
+             <width>180</width>
+             <height>240</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>180</width>
+             <height>240</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="engineLabel">
+           <property name="text">
+            <string>大肥鱼 · 你的鲸伴</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout" name="infoLayout">
+         <property name="spacing">
+          <number>9</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="brandLabel">
+           <property name="text">
+            <string>LOCAL-FIRST  /  面向长期陪伴的记忆架构</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="titleLabel">
+           <property name="text">
+            <string>鲸伴</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="subtitleLabel">
+           <property name="text">
+            <string>可溯源、可演进的事件级长期记忆</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="descriptionLabel">
+           <property name="text">
+            <string>SQLite 关系模型  ×  FTS5 索引  ×  检索式上下文组装</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="schemaLabel">
+           <property name="text">
+            <string>&lt;b&gt;事件演进 · Revision Tracking&lt;/b&gt;&lt;br/&gt;保留状态修订链，校验来源顺序与版本，减少旧状态回写。&lt;br/&gt;&lt;br/&gt;&lt;b&gt;消息溯源 · Source Provenance&lt;/b&gt;&lt;br/&gt;事件摘要关联原消息；来源删除时，相关事件与索引联动失效。&lt;br/&gt;&lt;br/&gt;&lt;b&gt;按需召回 · Context Retrieval&lt;/b&gt;&lt;br/&gt;按话题检索事件与个人记忆，必要时回读原文，控制上下文用量。</string>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::RichText</enum>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="featuresLabel">
+           <property name="text">
+            <string>增量归档 → 事件索引 → 相关召回 → 原文回读</string>
+           </property>
+           <property name="textFormat">
+            <enum>Qt::RichText</enum>
+           </property>
+           <property name="wordWrap">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="statusLabel">
+           <property name="text">
+            <string>正在准备启动…</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QProgressBar" name="progressBar">
+           <property name="value">
+            <number>0</number>
+           </property>
+           <property name="textVisible">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="authorLayout">
+           <item>
+            <widget class="QLabel" name="authorAvatarLabel">
+             <property name="text">
+              <string />
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>22</width>
+               <height>22</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QLabel" name="authorLabel">
+             <property name="text">
+              <string>by 雪落时</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="closeButton">
+           <property name="text">
+            <string>关闭</string>
+           </property>
+           <property name="visible">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources />
+ <connections />
+</ui>

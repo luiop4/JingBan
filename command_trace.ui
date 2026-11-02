@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CommandTrace</class>
+ <widget class="QFrame" name="CommandTrace">
+  <layout class="QVBoxLayout" name="traceLayout">
+   <property name="spacing"><number>6</number></property>
+   <property name="leftMargin"><number>8</number></property>
+   <property name="topMargin"><number>6</number></property>
+   <property name="rightMargin"><number>8</number></property>
+   <property name="bottomMargin"><number>6</number></property>
+   <item><widget class="QToolButton" name="toggleButton">
+    <property name="text"><string>电脑操作</string></property>
+    <property name="checkable"><bool>true</bool></property>
+    <property name="toolButtonStyle"><enum>Qt::ToolButtonTextBesideIcon</enum></property>
+    <property name="arrowType"><enum>Qt::RightArrow</enum></property>
+    <property name="sizePolicy"><sizepolicy hsizetype="Expanding" vsizetype="Fixed"><horstretch>0</horstretch><verstretch>0</verstretch></sizepolicy></property>
+   </widget></item>
+   <item><widget class="QWidget" name="detailsPanel"><layout class="QVBoxLayout" name="detailsLayout">
+    <property name="leftMargin"><number>0</number></property><property name="rightMargin"><number>0</number></property>
+    <item><widget class="QLabel" name="purposeLabel"><property name="wordWrap"><bool>true</bool></property><property name="textFormat"><enum>Qt::PlainText</enum></property></widget></item>
+    <item><widget class="QLabel" name="directoryLabel"><property name="wordWrap"><bool>true</bool></property><property name="textFormat"><enum>Qt::PlainText</enum></property></widget></item>
+    <item><widget class="QPlainTextEdit" name="commandView"><property name="readOnly"><bool>true</bool></property><property name="maximumHeight"><number>110</number></property></widget></item>
+    <item><widget class="QLabel" name="outputTitle"><property name="text"><string>执行输出</string></property></widget></item>
+    <item><widget class="QPlainTextEdit" name="outputView"><property name="readOnly"><bool>true</bool></property><property name="minimumHeight"><number>120</number></property><property name="maximumHeight"><number>240</number></property><property name="placeholderText"><string>命令尚未产生输出</string></property></widget></item>
+    <item><widget class="QLabel" name="resultLabel"><property name="wordWrap"><bool>true</bool></property></widget></item>
+    <item><widget class="QLabel" name="ephemeralLabel"><property name="text"><string>操作日志单独保存 · 追问近期任务时读取摘要 · 不加入长期记忆</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+   </layout></widget></item>
+  </layout>
+ </widget><resources/><connections/>
+</ui>

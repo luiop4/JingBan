@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>EventHistoryDialog</class>
+ <widget class="QDialog" name="EventHistoryDialog">
+  <property name="windowTitle"><string>事件变更记录</string></property>
+  <property name="minimumSize"><size><width>560</width><height>400</height></size></property>
+  <property name="sizeGripEnabled"><bool>true</bool></property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item><widget class="QLabel" name="descriptionLabel"><property name="text"><string>最近 100 次记录 · 最新在前 · 状态以用户消息为依据</string></property><property name="wordWrap"><bool>true</bool></property></widget></item>
+   <item><widget class="QPlainTextEdit" name="historyText"><property name="readOnly"><bool>true</bool></property></widget></item>
+   <item><widget class="QPushButton" name="closeButton"><property name="text"><string>关闭</string></property></widget></item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
