@@ -1,0 +1,7 @@
+PySide6>=6.6
+openai>=1.40
+websockets>=11,<14
+requests>=2.31
+pypdf>=5.0
+yt-dlp==2026.8.19
+
