@@ -1,9 +1,6 @@
-* text=auto
-*.md text eol=lf
-*.py text eol=lf
-*.json text eol=lf
-*.svg text eol=lf
-*.bat text eol=crlf
+# Preserve the project's existing line endings across browser uploads and clones.
+# Text files remain diffable; -text only disables line-ending conversion.
+* -text
 *.png binary
 *.jpg binary
 *.ico binary
