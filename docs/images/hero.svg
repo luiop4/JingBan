@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-label="鲸伴，有记忆的陪伴">
+  <defs>
+    <linearGradient id="sea" x2="1" y2="1"><stop stop-color="#0b1733"/><stop offset="1" stop-color="#123a5b"/></linearGradient>
+    <linearGradient id="tail" x2="1" y2="1"><stop stop-color="#9ee9ff"/><stop offset="1" stop-color="#6c92ff"/></linearGradient>
+  </defs>
+  <rect width="1200" height="360" rx="24" fill="url(#sea)"/>
+  <g fill="none" stroke="#67c9e1" opacity=".13"><circle cx="1020" cy="160" r="210"/><circle cx="1020" cy="160" r="150"/><path d="M0 300 Q300 230 600 300 T1200 290"/><path d="M0 325 Q300 255 600 325 T1200 315"/></g>
+  <g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif">
+    <text x="68" y="72" fill="#8bd9eb" font-size="15" letter-spacing="5">JINGBAN / YOUR DESKTOP COMPANION</text>
+    <text x="64" y="154" fill="#fff" font-size="66" font-weight="700">鲸伴</text>
+    <text x="68" y="210" fill="#e0edff" font-size="30">让每一次相处，都有下文。</text>
+    <text x="68" y="252" fill="#a6bed8" font-size="18">记得你说过的话，也留住一起经历的事。</text>
+    <g font-size="14" fill="#c6eaff"><rect x="68" y="280" width="104" height="32" rx="16" fill="#214661"/><text x="88" y="302">可追溯记忆</text><rect x="184" y="280" width="112" height="32" rx="16" fill="#214661"/><text x="204" y="302">QQ 跨端接续</text><rect x="308" y="280" width="102" height="32" rx="16" fill="#214661"/><text x="329" y="302">鲸鱼心跳</text></g>
+  </g>
+  <g transform="translate(790 88)">
+    <path d="M30 100 C20 30 130 0 192 50 C218 76 218 116 198 136 C181 151 154 154 126 153 C87 152 51 146 37 126 C5 132 -15 119 -22 101 C-3 98 14 100 30 110 Z" fill="url(#tail)"/>
+    <path d="M191 100 C225 85 228 64 224 42 C244 53 254 69 251 84 C267 60 287 62 299 64 C285 93 268 105 245 105 C229 106 216 111 205 119" fill="url(#tail)"/>
+    <path d="M62 115 Q120 153 191 130 Q146 169 83 145" fill="#def5ff"/>
+    <path d="M99 124 Q112 158 137 158 Q135 136 123 122" fill="#739efa"/>
+    <circle cx="71" cy="83" r="6" fill="#113257"/><circle cx="69" cy="81" r="2" fill="#fff"/>
+    <path d="M53 102 Q64 110 78 103" fill="none" stroke="#355e98" stroke-width="3" stroke-linecap="round"/>
+    <path d="M99 15 Q91 -8 81 -10 M101 12 Q109 -10 121 -10" fill="none" stroke="#b1edff" stroke-width="5" stroke-linecap="round"/>
+    <g fill="#a9edff"><circle cx="16" cy="32" r="4"/><circle cx="282" cy="155" r="5"/><circle cx="261" cy="178" r="3"/><path d="M237 8 v14 m-7 -7 h14" fill="none" stroke="#a9edff" stroke-width="2"/></g>
+  </g>
+</svg>
